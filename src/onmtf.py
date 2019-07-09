@@ -85,12 +85,16 @@ class ONMTF(object):
     self.S *= enum
     self.S /= denom
     
-  def factorize(self):
+  def factorize(self,initialize_opt='kmeans'):
+    # default initialization method is kmeans
     # check to see if X is non negative
     self.check_non_negativity()
     # initialize if no F,S,G as attribute
     if not hasattr(self,'F') or not hasattr(self,'G') or not hasattr(self,'S'):
-      self.initialize()
+      if initialize_opt == 'random':
+        self.initialize_random()
+      elif initialize_opt == 'kmeans':
+        self.initialize()
       
     # generate a 1*max_iter array to record frob error of each iteration  
     self.frob_error_log = np.zeros(self.max_iter)

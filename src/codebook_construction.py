@@ -7,7 +7,7 @@ IJCAI International Joint Conference on Artificial Intelligence. 2052-2057.
 import numpy as np
 from numpy.linalg import multi_dot
 
-def codebook_construction(X,F,G):
+def codebook_construction(X,F,G,binarize):
   """
   Codebook construction:
   1. Binarize F and G matrix with 0 and 1 (Li et al 2009 did this for simplicity, 
@@ -15,8 +15,9 @@ def codebook_construction(X,F,G):
   2. Compute codebook with the following equation
   B = [U.T@X@V]\varslash[U.T]
   """
-  F = binarize_matrix(F)
-  G = binarize_matrix(G)
+  if binarize:
+    F = binarize_matrix(F)
+    G = binarize_matrix(G)
   #sum_vector_m = np.ones(X.shape[0])
   #sum_vector_n = np.ones(X.shape[1])
   sum_vector = np.ones((X.shape[0],X.shape[1]))
