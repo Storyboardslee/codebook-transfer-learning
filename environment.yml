@@ -1,0 +1,14 @@
+name: 'codebook-transfer-learning'
+channels:
+  - defaults
+
+dependencies:
+  - numpy
+  - scikit-learn
+  - scipy
+  - matplotlib
+  - seaborn
+  
+
+
+
