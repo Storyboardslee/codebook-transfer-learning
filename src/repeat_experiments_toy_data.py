@@ -92,7 +92,7 @@ def main():
   shf = args.shuffle
 
   source_data = generate_toy_data(k,l,c,sym,shf) 
-  target_data, validation_data = train_test_split(source_data,hf,args.symmetric)
+  target_data, validation_data = train_test_split(source_data,hf,args.symmetrize)
   all_results = repeat_experiments(source_data,k,l,target_data,validation_data,args.repeat) 
   #summarized, collected = summarize_results(all_results)
 
