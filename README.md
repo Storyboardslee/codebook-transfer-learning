@@ -1,5 +1,5 @@
 # codebook-transfer-learning (COTL)
-Transfer learning using ONMTF and codebook construction to extract information with more than one latent factors from source domain matrix and transfer information to sparse target domain. Based and modified from Li et al 2009, and Ding et al 2006. Implemented for cross-domain biological data imputation. Currently experiments are run with toy data.
+Transfer learning using ONMTF and codebook construction to extract information with more than one latent factors from source domain matrix and transfer information to sparse target domain. Based and modified from Li et al 2009, and Ding et al 2006. Implemented for cross-domain biological data imputation. Currently experiments are run with toy data. Genetic data and single-cell data will be added after processing.
 
 ## Setup
 ### Install dependencies required to run experiments
